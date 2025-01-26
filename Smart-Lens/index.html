@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens Scanner App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lens Scanner</h1>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Upload an Image</h2>
+            <label for="imageInput">Choose an image:</label>
+            <input type="file" id="imageInput" accept="image/*" title="Upload an image file" placeholder="Select an image">
+            <canvas id="imageCanvas"></canvas>
+        </section>
+
+        <section id="text-section">
+            <h2>Extracted Text</h2>
+            <textarea id="extractedText" rows="6" readonly></textarea>
+            <div class="actions">
+                <button id="copyButton">Copy Text</button>
+                <button id="listenButton">Listen</button>
+                <label for="searchInput">Search for a word:</label>
+                <input type="text" id="searchInput" title="Search for a word" placeholder="Enter a word to search">
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tesseract.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <!-- App JS -->
+    <script src="script.js"></script>
+</body>
+</html>
